@@ -1,0 +1,113 @@
+.weather-app{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+}
+.weather-app:before{
+  content: '';
+  background: url('./assets/background.jpg') no-repeat center center/cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.weather-container{
+  max-width: 780px;
+  height: 780px;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.weather-app .top{
+  width: 100%;
+  margin: 1rem auto;
+}
+.weather-app .desc{
+  position: absolute;
+  top: 13%;
+  right: -8%;   
+  max-width: 100%;
+  padding: 1rem;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;
+}
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .weather-app .desc {
+    right: 0;
+    font-size: 1rem;  /* Smaller text for mobile */
+    /* Remove rotation for readability on small screens */
+    white-space: normal;   /* Adjust font size */
+  }
+}
+@media screen and (max-width: 767px) {
+  .weather-app .desc {
+    right: 0;
+    font-size: 1rem;  /* Smaller text for mobile */
+     /* Remove rotation for readability on small screens */
+    white-space: normal;  /* Allow text to wrap if necessary */
+  }
+}
+
+.weather-container .bottom{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.2);
+}
+.bold{
+  font-weight: 700;
+}
+.searchbar {
+  position: relative;
+}
+.searchbar input[type="text"] {
+  padding-right: 2.5rem; /* use relative unit for padding */
+}
+.weather-app .searchbar{
+  text-align: center;
+  padding: 1rem;
+}
+.weather-app input {
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8f8f8;
+}
+
+::placeholder{
+  color: #f8f8f8;
+}
+.searchbar .search-icon {
+  position: absolute;
+  right: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.desc > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desc > div > span {
+  font-size: 24px; /* adjust the font size to your liking */
+  margin-bottom: 10px; /* add some space between the icon and the weather status */
+}
+
+
+
